@@ -7,9 +7,6 @@ echo '---'
 # 以下がメニューに
 ###################
 
-# display date
-date
-
 # open google
 echo 'google | href=https://google.co.jp/'
 
