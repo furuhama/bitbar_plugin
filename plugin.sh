@@ -13,3 +13,5 @@ echo 'google | href=https://google.co.jp/'
 # open devdocs
 echo 'devdocs | href=http://devdocs.io/'
 
+# vim cheatsheet
+echo 'vim cheat sheet | href=https://vim.rtorr.com/lang/ja/'
