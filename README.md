@@ -1,4 +1,4 @@
-# [my bitbar plugins](https://github.com/matryer/bitbar)
+# my [bitbar](https://github.com/matryer/bitbar) plugins
 
 ## plugin.sh
 this is :sushi: icon plugin
