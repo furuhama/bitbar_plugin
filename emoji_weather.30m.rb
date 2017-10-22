@@ -1,11 +1,16 @@
-#!/usr/bin/env ruby
+#!/bin/sh
+shopt -s expand_aliases
+source ~/Documents/bitbar_plugin/.env
 
+exec ruby -S -x "$0" "$@"
+
+#!ruby
 require 'net/http'
 require 'json'
 require 'uri'
 
-api_key = 'YOUR_API_KEY'
-city = 'Tokyo'
+api_key = ENV['WEATHER_API_KEY'] # api token
+city = 'Tokyo' # your city name
 url = URI.parse("http://api.openweathermap.org/data/2.5/weather?q=#{city}&units=imperial&appid=#{api_key}")
 
 # text
