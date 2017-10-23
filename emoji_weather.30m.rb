@@ -14,7 +14,7 @@ city = 'Tokyo' # your city name
 url = URI.parse("http://api.openweathermap.org/data/2.5/weather?q=#{city}&units=imperial&appid=#{api_key}")
 
 # text
-emoji_list = [ ':sob:',
+emoji_list = [ 'id_error',
                '::',
                ':zap:',
                ':droplet',
