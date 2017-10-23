@@ -25,11 +25,15 @@ emoji_list = [ ':sob:',
                ':sunny:',
                ':cyclone:']
 
-res_json = Net::HTTP.get(url)
+begin
+  res_json = Net::HTTP.get(url)
 
-weather = JSON.parse(res_json)['weather']
-id = weather[0]['id']
-id = id / 100
+  weather = JSON.parse(res_json)['weather']
+  id = weather[0]['id']
+  id = id / 100
 
-print emoji_list[id]
+  print emoji_list[id]
+rescue
+  print ':sob:' # print ':sob:' when network error occurs
+end
 
