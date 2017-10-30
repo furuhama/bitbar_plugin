@@ -38,7 +38,12 @@ private_json = client.get('rtm.tasks.getList', { list_id: private_list_id, filte
 private_tasks = private_json['rsp']['tasks']['list'][0]['taskseries']
 
 private_tasks.each do |task|
-  puts "#{task['name']}  [#{task['tags']['tag']}]| color=blue"
+  begin
+    puts "#{task['name']}  [#{task['tags']['tag']}]| color=blue"
+  rescue
+    # rescue if task['tags'] does not have 'tag' value
+    puts "#{task['name']}| color=blue"
+  end
 end
 
 ##################
