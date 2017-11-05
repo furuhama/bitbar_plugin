@@ -16,6 +16,6 @@ begin
   print "USD JPY: #{rate_bid}"
 rescue
   # for network error
-  print ':money::error:'
+  print ':money_with_wings:'
 end
 
