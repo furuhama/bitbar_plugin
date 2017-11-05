@@ -1,6 +1,6 @@
 #!/bin/sh
 shopt -s expand_aliases
-source ~/Documents/bitbar_plugin/.env
+source ~/workspace/bitbar_plugin/.env
 
 exec ruby -S -x "$0" "$@"
 
