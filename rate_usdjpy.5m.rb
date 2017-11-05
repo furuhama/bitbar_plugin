@@ -10,8 +10,8 @@ res_json = Net::HTTP.get(url)
 
 begin
   # 'USDJPY' is #21 in list of rates
-  # get 'bit' rate
-  rate_bid = JSON.parse(res_json)['quotes'][20]['bit']
+  # get 'bid' rate
+  rate_bid = JSON.parse(res_json)['quotes'][20]['bid']
 
   print "USD JPY: #{rate_bid}"
 rescue
