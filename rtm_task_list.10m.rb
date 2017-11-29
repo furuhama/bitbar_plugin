@@ -40,6 +40,10 @@ private_tasks = private_json['rsp']['tasks']['list'][0]['taskseries']
 private_tasks.each do |task|
   begin
     puts "[#{task['tags']['tag']}]  #{task['name']}| color=blue"
+    # show note of each task
+    unless task['notes'].empty?
+      puts "--#{task['notes']['note']['$t']}| color=blue"
+    end
   rescue
     # rescue if task['tags'] does not have 'tag' value
     puts "#{task['name']}| color=blue"
@@ -63,4 +67,3 @@ work_tasks = work_json['rsp']['tasks']['list'][0]['taskseries']
 work_tasks.each do |task|
   puts "[#{task['tags']['tag']}]  #{task['name']}| color=green"
 end
-
