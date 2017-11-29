@@ -46,7 +46,7 @@ private_tasks.each do |task|
     end
   rescue
     # rescue if task['tags'] does not have 'tag' value
-    puts "#{task['name']}| color=blue"
+    puts "#{task['name']}| color=blue" rescue nil
   end
 end
 
@@ -65,5 +65,5 @@ work_json = client.get('rtm.tasks.getList', { list_id: work_list_id, filter: "st
 work_tasks = work_json['rsp']['tasks']['list'][0]['taskseries']
 
 work_tasks.each do |task|
-  puts "[#{task['tags']['tag']}]  #{task['name']}| color=green"
+  puts "[#{task['tags']['tag']}]  #{task['name']}| color=green" rescue nil
 end
