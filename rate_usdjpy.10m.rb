@@ -13,7 +13,7 @@ begin
   # get 'bid' rate
   rate_bid = JSON.parse(res_json)['quotes'][20]['bid']
 
-  print "USD JPY: #{rate_bid}"
+  print "#{rate_bid}"
 rescue
   # for network error
   print ':money_with_wings:'
